@@ -8,7 +8,7 @@ export function App() {
     const [repos, setRepos] = useState([]);
 
     useEffect(() => {
-        fetch('https://api.github.com/users/herrera-daniel/repos')
+        fetch('https://api.github.com/users/tubadan33/repos')
             .then(res => res.json().then(j => {
                 setRepos(j.map((r: { id: string; name: string; full_name: string; forks_count: number; stargazers_count: number; watchers_count: number; description: string; html_url: string; }) => (
                     <Repo
